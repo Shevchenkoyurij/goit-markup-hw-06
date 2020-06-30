@@ -164,7 +164,7 @@ transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cub
 }
 
 .backdrop.is-hidden {
-    /* visibility: hidden; */
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
