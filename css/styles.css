@@ -87,7 +87,14 @@ line-height: 31px;
    transition: fill 250ms var(--cubic);
 }
 
-
+/* .conteiner {
+margin-left: auto;
+margin-right: auto;
+width: 1200px;
+  
+padding-right: 15px;
+padding-left: 15px;  
+} */
 
 
 
@@ -95,10 +102,10 @@ line-height: 31px;
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
-  /* height: 80px; */
+  
   padding-right: 15px;
   padding-left: 15px;
-  /* outline: 2px solid tomato; */
+ 
 
 }
 
@@ -337,7 +344,7 @@ padding-bottom: 94px;
   list-style: none;
   justify-content: center; 
   position: center;
-  
+  padding-inline-start: 0px;
 }
 
 .team > .team-member {
