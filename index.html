@@ -57,7 +57,7 @@
 
 
           <p class="inovations">
-            Оставьте свои данные, мы Вам перезвоним
+            Оставьте свои данные, мы вам перезвоним
           </p>
 
           </form>
@@ -414,6 +414,21 @@
   </div>
   <p class="copyright container">2020 | Developed by GoIT Students</p>
 </footer>
+<script>
+  (() => {
+    document
+      .querySelector('.js-speaker-form')
+      .addEventListener('submit', e => {
+        e.preventDefault();
+
+        new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+        );
+
+        e.currentTarget.reset();
+      });
+  })();
+</script>
       <script src="./js/modal.js"></script>
     </body>
 </html>
