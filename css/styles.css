@@ -1206,12 +1206,12 @@ line-height: 24px;
 }
 .form-start.textarea:focus-within .textarea {
     transform: translateY(-32px);
-    color: var(--accent-color);
+    color: var(--main-accent);
 }
 
 .comment-input:not(:placeholder-shown) + .comment-label {
     transform: translateY(-32px);
-    color: var(--accent-color);
+    color: var(--main-accent);
 }
 .comment-label {
     position: absolute;
@@ -1230,30 +1230,31 @@ line-height: 24px;
   padding: 12px 16px;
 }
 
-.form-input:focus ~ .icon-input, 
+/* .form-input:focus ~ .icon-input, 
 .form-input:not(:placeholder-shown) .icon-input{
-    fill: var(---main-accent);
+    fill: var(--main-accent);
     
-} 
+}  */
 .form-start.comment-field:focus-within .comment-label {
     transform: translateY(-34px);
     color: var(--main-accent);
 }
 
-.comment-input:not(:placeholder-shown) + .comment-label {
+/* .comment-input:not(:placeholder-shown) + .comment-label {
     transform: translateY(-32px);
     color: var(--main-accent);
-}
+} */
+
+
+.form-input:not(:placeholder-shown),
+.form-input:focus {
+   outline: 1px solid var(--main-accent);
+   border-color: var(--main-accent);
+     
+} 
 
 /* _____________________________________________ */
 
-/* .form-field:focus-within>.form-label,
-.form-input:not(:placeholder-shown)+.form-label {
-  transform: translate(-26px, -36px);
-
-  font-size: 12px;
-  color: var(--accent-color);
-} */
 
 
 
