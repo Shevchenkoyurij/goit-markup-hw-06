@@ -1131,7 +1131,7 @@ line-height: 24px;
   text-transform: uppercase;
 }
 
-
+/* ------------------------------- */
 .form-start {
   margin-bottom: 28px;
       display: flex;
@@ -1188,9 +1188,21 @@ line-height: 24px;
 .form-stop {
     padding-bottom: 30px;
 }
+/* _____________________________________________ */
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) +.form-label {
+  transform: translateY(-50px);
+}
 
+.form-input:placeholder-shown{
+  background-color: red;
+}
 
-
+.form-input:not(:placeholder-shown) + .form-label {
+    
+    transform: translate(-26px, -38px); 
+    color: var(--accent-color);
+}
 
 
 
