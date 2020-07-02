@@ -130,13 +130,7 @@ padding-left: 15px;
     width: 100%;
     margin-bottom: 28px;
 }
-.textarea {
-    resize: none;
-    padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    width: 100%;
-}
+
 
 
 
@@ -1125,22 +1119,20 @@ line-height: 24px;
 }
 
 /* ------------------------------- */
-.person-icon {
+.person-icon{
     position: absolute;
-  
     left: 18px;
     transform: translateY(-10%);
     display: inline-block;
-    fill: var(--primary-text-color);
-}
-
-
+} 
 
 .form-start {
+  display: flex;
   position: relative;
   margin-bottom: 28px;
-  display: flex;
   align-items: center;
+  
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-start input{
   padding-left: 42px;
@@ -1149,24 +1141,43 @@ line-height: 24px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     background-color: #ffffff;
-    border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
-    margin: 0;
     
 }
 .form-start .form-label {
-    line-height: 16px;
-    letter-spacing: 0.01em;
-    display: block;
+    display: flex;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-48%);
     margin-left: 0px;
-    left: 42px;
+    left: 50px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: tomato;
+    color: #757575;
+
+    line-height: 16px;
+    letter-spacing: 0.01em;
 }
+
+.form-label-comment {
+    resize: none;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-start:focus-within>.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+ transform: translate(-36px, -46px);
+  font-size: 12px;
+  color: var(--main-accent);
+  fill: var(--main-accent);
+}
+
+
+
 
 .form-start .name{
   position: absolute;
@@ -1193,11 +1204,56 @@ line-height: 24px;
 .form-stop {
     padding-bottom: 30px;
 }
+.form-start.textarea:focus-within .textarea {
+    transform: translateY(-32px);
+    color: var(--accent-color);
+}
+
+.comment-input:not(:placeholder-shown) + .comment-label {
+    transform: translateY(-32px);
+    color: var(--accent-color);
+}
+.comment-label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    display: block;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.comment-input{
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 120px;
+  width: 100%;
+  padding: 12px 16px;
+}
+
+.form-input:focus ~ .icon-input, 
+.form-input:not(:placeholder-shown) .icon-input{
+    fill: var(---main-accent);
+    
+} 
+.form-start.comment-field:focus-within .comment-label {
+    transform: translateY(-34px);
+    color: var(--main-accent);
+}
+
+.comment-input:not(:placeholder-shown) + .comment-label {
+    transform: translateY(-32px);
+    color: var(--main-accent);
+}
+
 /* _____________________________________________ */
 
+/* .form-field:focus-within>.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+  transform: translate(-26px, -36px);
 
-
-
+  font-size: 12px;
+  color: var(--accent-color);
+} */
 
 
 
@@ -1221,9 +1277,9 @@ line-height: 24px;
     width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
     color:rgba(255, 255, 255, 0.6);
 
     background-color: #2F303A;
